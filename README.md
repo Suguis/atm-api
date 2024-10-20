@@ -1,32 +1,55 @@
-# Spring Boot Template
+# Atm API
 
-This is a Spring Boot template that can be customized as per your requirements.
+_NOTE: (This is a technical test for a selection process)._
 
-## Getting Started
+This API is designed for an imaginary atm service.
 
-To start using this Spring Boot template, follow these steps:
+## Tech stack
 
-1. Clone or download the template repository.
-2. Open the project in your preferred Integrated Development Environment (IDE).
-3. Customize the project by modifying the source code, configurations, and dependencies as necessary.
-4. Build and run the project using the provided build tools, such as Maven or Gradle.
+This application is built using:
 
-## Documentation
+- **Java 17**
+- **Spring Boot 3.1.0**
+- **Docker** for easy deployment and running
 
-For detailed documentation, tutorials, and examples on how to work with Spring Boot, please refer to the official Spring Boot website: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+## Set up
 
-## Community and Support
+Before you begin, ensure you have one of the following installed on your machine:
 
-Join the Spring Boot community to connect with other developers and get support:
+- **Docker**
+- **JDK 17**
 
-- [Spring Boot Forum](https://community.spring.io/forum/spring-boot)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/spring-boot)
-- [GitHub Issues](https://github.com/spring-projects/spring-boot/issues)
+Clone the repository:
 
-## License
+```sh
+git clone https://github.com/Suguis/atm-api.git
+cd atm-api
+```
 
-This Spring Boot template is provided under the [Apache 2.0 license](https://github.com/spring-projects/spring-boot/blob/main/LICENSE.txt).
+## Tests
 
----
+You can run the application tests via Maven Wrapper.
 
-Feel free to customize and adapt this Spring Boot template to suit your needs. Happy coding!
+### Maven Wrapper
+
+```sh
+chmod +x mvnw  # You could need to give it execution permisions
+./mvnw clean test
+```
+
+## Running
+
+You can run the application via Maven Wrapper or via Docker.
+
+### Maven Wrapper
+
+```sh
+./mvnw clean spring-boot:run  # Run the application
+```
+
+### Docker
+
+```sh
+docker build . --tag 'suguis:atm-api'  # Build the image first
+docker docker run -p8080:8080 'suguis:atm-api'  # Launch a container from the image built earlier
+```
