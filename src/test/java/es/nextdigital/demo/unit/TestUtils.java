@@ -12,7 +12,7 @@ import es.nextdigital.demo.model.Iban;
 
 public class TestUtils {
     public static Account getTestAccount() {
-        var account = new Account(new Iban("ES6621000418401234567891"));
+        var account = new Account(new Iban("ES639485818401234567891"));
         var movements = List.of(new AccountMovement(BigDecimal.valueOf(2.50), AccountMovementType.DEPOSIT),
                 new AccountMovement(BigDecimal.valueOf(-1.00), AccountMovementType.TRANSFER));
         movements.forEach(m -> account.addMovement(m));
