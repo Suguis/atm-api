@@ -13,8 +13,6 @@ public class AccountMovement {
         this.type = type;
     }
 
-    private long id;
-
     BigDecimal quantity;
 
     AccountMovementType type;
